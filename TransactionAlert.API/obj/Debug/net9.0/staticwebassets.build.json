@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "kDTssWaMMIyxduxi3LtRCYKem01ySdaZ/Ey0+qtCiP8=",
+  "Source": "TransactionAlert.API",
+  "BasePath": "_content/TransactionAlert.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

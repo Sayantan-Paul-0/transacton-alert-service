@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "BPyo8mAX5js=",
+  "success": true,
+  "projectFilePath": "/Users/sayantan_paul/workspace/github.com/transaction-alert/TransactionAlert.Shared/TransactionAlert.Shared.csproj",
+  "expectedPackageFiles": [
+    "/Users/sayantan_paul/.nuget/packages/system.io.pipelines/10.0.7/system.io.pipelines.10.0.7.nupkg.sha512",
+    "/Users/sayantan_paul/.nuget/packages/system.text.encodings.web/10.0.7/system.text.encodings.web.10.0.7.nupkg.sha512",
+    "/Users/sayantan_paul/.nuget/packages/system.text.json/10.0.7/system.text.json.10.0.7.nupkg.sha512"
+  ],
+  "logs": []
+}

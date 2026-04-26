@@ -1,0 +1,12 @@
+/Users/sayantan_paul/workspace/github.com/transaction-alert/TransactionAlert.Shared/bin/Debug/net9.0/TransactionAlert.Shared.deps.json
+/Users/sayantan_paul/workspace/github.com/transaction-alert/TransactionAlert.Shared/bin/Debug/net9.0/TransactionAlert.Shared.dll
+/Users/sayantan_paul/workspace/github.com/transaction-alert/TransactionAlert.Shared/bin/Debug/net9.0/TransactionAlert.Shared.pdb
+/Users/sayantan_paul/workspace/github.com/transaction-alert/TransactionAlert.Shared/obj/Debug/net9.0/TransactionAlert.Shared.csproj.AssemblyReference.cache
+/Users/sayantan_paul/workspace/github.com/transaction-alert/TransactionAlert.Shared/obj/Debug/net9.0/TransactionAlert.Shared.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sayantan_paul/workspace/github.com/transaction-alert/TransactionAlert.Shared/obj/Debug/net9.0/TransactionAlert.Shared.AssemblyInfoInputs.cache
+/Users/sayantan_paul/workspace/github.com/transaction-alert/TransactionAlert.Shared/obj/Debug/net9.0/TransactionAlert.Shared.AssemblyInfo.cs
+/Users/sayantan_paul/workspace/github.com/transaction-alert/TransactionAlert.Shared/obj/Debug/net9.0/TransactionAlert.Shared.csproj.CoreCompileInputs.cache
+/Users/sayantan_paul/workspace/github.com/transaction-alert/TransactionAlert.Shared/obj/Debug/net9.0/TransactionAlert.Shared.dll
+/Users/sayantan_paul/workspace/github.com/transaction-alert/TransactionAlert.Shared/obj/Debug/net9.0/refint/TransactionAlert.Shared.dll
+/Users/sayantan_paul/workspace/github.com/transaction-alert/TransactionAlert.Shared/obj/Debug/net9.0/TransactionAlert.Shared.pdb
+/Users/sayantan_paul/workspace/github.com/transaction-alert/TransactionAlert.Shared/obj/Debug/net9.0/ref/TransactionAlert.Shared.dll
