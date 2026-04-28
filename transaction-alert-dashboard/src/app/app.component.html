@@ -1,0 +1,57 @@
+<div class="container">
+  <h1>Transaction Alert Dashboard</h1>
+
+  <div class="card">
+    <h2>Submit Transaction</h2>
+    <div class="form-row">
+      <input [(ngModel)]="form.fromAccount" placeholder="From Account" />
+      <input [(ngModel)]="form.toAccount" placeholder="To Account" />
+      <input [(ngModel)]="form.amount" type="number" placeholder="Amount" />
+      <select [(ngModel)]="form.currency">
+        <option>INR</option>
+        <option>USD</option>
+      </select>
+      <button (click)="submitTransaction()" [disabled]="submitting">
+        {{ submitting ? 'Sending...' : 'Submit' }}
+      </button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="table-header">
+      <h2>Transaction History</h2>
+      <button (click)="loadTransactions()">Refresh</button>
+    </div>
+
+    <div *ngIf="loading">Loading...</div>
+
+    <table *ngIf="!loading">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>From</th>
+          <th>To</th>
+          <th>Amount</th>
+          <th>Currency</th>
+          <th>Timestamp</th>
+          <th>Alert</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let t of transactions" [class.alert-row]="t.alertTriggered">
+          <td>{{ t.id | slice:0:8 }}...</td>
+          <td>{{ t.fromAccount }}</td>
+          <td>{{ t.toAccount }}</td>
+          <td>{{ t.amount | number }}</td>
+          <td>{{ t.currency }}</td>
+          <td>{{ t.timestamp | date:'short' }}</td>
+          <td>
+            <span [class]="t.alertTriggered ? 'badge alert' : 'badge ok'">
+              {{ t.alertTriggered ? '⚠ Alert' : '✓ OK' }}
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
