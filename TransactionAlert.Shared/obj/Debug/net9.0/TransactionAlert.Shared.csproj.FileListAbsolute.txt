@@ -10,3 +10,4 @@
 /Users/sayantan_paul/workspace/github.com/transaction-alert/TransactionAlert.Shared/obj/Debug/net9.0/refint/TransactionAlert.Shared.dll
 /Users/sayantan_paul/workspace/github.com/transaction-alert/TransactionAlert.Shared/obj/Debug/net9.0/TransactionAlert.Shared.pdb
 /Users/sayantan_paul/workspace/github.com/transaction-alert/TransactionAlert.Shared/obj/Debug/net9.0/ref/TransactionAlert.Shared.dll
+/Users/sayantan_paul/workspace/github.com/transaction-alert/TransactionAlert.Shared/obj/Debug/net9.0/TransactionAlert.Shared.sourcelink.json

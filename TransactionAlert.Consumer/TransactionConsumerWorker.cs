@@ -1,4 +1,5 @@
 using Confluent.Kafka;
+using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 using TransactionAlert.Shared;
 
@@ -9,17 +10,20 @@ public class TransactionConsumerWorker : BackgroundService
     private readonly ILogger<TransactionConsumerWorker> _logger;
     private readonly IConfiguration _config;
     private readonly EmailService _emailService;
+    private readonly IServiceScopeFactory _scopeFactory;
     private const string Topic = "transactions";
     private const decimal AlertThreshold = 10000;
 
     public TransactionConsumerWorker(
         ILogger<TransactionConsumerWorker> logger,
         IConfiguration config,
-        EmailService emailService)
+        EmailService emailService,
+        IServiceScopeFactory scopeFactory)
     {
         _logger = logger;
         _config = config;
         _emailService = emailService;
+        _scopeFactory = scopeFactory;
     }
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -48,7 +52,27 @@ public class TransactionConsumerWorker : BackgroundService
                 _logger.LogInformation("Consumed transaction {Id} for amount {Amount}",
                     transaction.Id, transaction.Amount);
 
-                if (transaction.Amount >= AlertThreshold)
+                bool alertTriggered = transaction.Amount >= AlertThreshold;
+
+                // Persist to SQLite
+                using (var scope = _scopeFactory.CreateScope())
+                {
+                    var db = scope.ServiceProvider.GetRequiredService<TransactionDbContext>();
+                    db.Transactions.Add(new TransactionRecord
+                    {
+                        Id = transaction.Id,
+                        FromAccount = transaction.FromAccount,
+                        ToAccount = transaction.ToAccount,
+                        Amount = transaction.Amount,
+                        Currency = transaction.Currency,
+                        Timestamp = transaction.Timestamp,
+                        AlertTriggered = alertTriggered
+                    });
+                    await db.SaveChangesAsync(stoppingToken);
+                    _logger.LogInformation("Transaction {Id} persisted.", transaction.Id);
+                }
+
+                if (alertTriggered)
                 {
                     _logger.LogInformation("Alert threshold breached. Sending email...");
 

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TransactionAlert.Consumer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fcdd97da2ec7646779663239fa98a66a3268337d")]
 [assembly: System.Reflection.AssemblyProductAttribute("TransactionAlert.Consumer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TransactionAlert.Consumer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
